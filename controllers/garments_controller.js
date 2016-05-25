@@ -31,7 +31,7 @@ controller.create = function(req, res) {
 
   // push garment into closet array in user model here
   });
-  var user = User.findById('57439dbbbc946f327297cacc', function(err, user) {
+  var user = User.findById('57452bd37d5eb627b54fd936', function(err, user) {
     if (err) throw err;
     user.closet.push(garment);
     res.json(garment);

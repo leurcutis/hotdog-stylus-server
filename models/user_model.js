@@ -6,8 +6,6 @@ var Garment = require('../models/garment_model.js');
 var userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
-  email: String,
-  password: String,
   avatarUrl: String,
   closet: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Garment' }],
   outfits: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Outfit' }],

@@ -18,8 +18,6 @@ controller.create = function(req, res) {
   var user = new User({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email,
-    password: req.body.password,
     avatarUrl: req.body.avatarUrl,
     createdAt: req.body.createdAt,
     updatedAt: req.body.updatedAt,
@@ -48,7 +46,6 @@ controller.update = function(req, res) {
   var id = req.params.id;
   var firstName = req.params.firstName;
   var lastName = req.body.lastName;
-  var email = req.body.email;
   var avatarUrl = req.body.avatarUrl;
   var createdAt = req.body.createdAt;
   var updatedAt = req.body.updatedAt;
@@ -57,7 +54,6 @@ controller.update = function(req, res) {
     {_id: id},
     { firstName: firstName,
       lastName: lastName,
-      email: email,
       avatarUrl: avatarUrl,
       createdAt: createdAt,
       updatedAt: updatedAt,
