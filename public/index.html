@@ -12,13 +12,12 @@
   <script src="js/garments_controller.js" charset="utf-8"></script>
   <script src="js/outfits_controller.js" charset="utf-8"></script>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.js">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
 <body>
-
 
   <div ng-controller="OutfitsController as outfits">
   </div>
@@ -34,12 +33,13 @@
       <img ng-src="{{garments.currentChoice.jacket.imageUrl}}" class="currentChoice" id="jacket">
 
     </div>
-    <ul ng-repeat="garment in garments.all">
-      <li ng-click="garments.select(garment)">
-        <img class="garment" ng-src="{{garment.imageUrl}}">
-      </li>
-    </ul>
-    <img ng-src="{{garments.sampleImage}}">
+    <div class=".col-md-4">
+    <h3>Garments</h3>
+      <div ng-repeat="garment in garments.all">
+        <p ng-click="garments.select(garment)"><img class="garment" ng-src="{{garment.imageUrl}}">
+        </p>
+      </div>
+    </div>
   </div>
 
 </body>

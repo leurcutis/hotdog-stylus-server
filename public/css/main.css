@@ -1,9 +1,16 @@
 
 
+h1 {
+
+}
+
 #outfit_builder {
-  min-height: 630px;
-  width: 630px;
-  background: url('https://dl.dropboxusercontent.comm/s/ezmku4py6ar2x5b/mannequinn-black.png?dl=0');
+  position: relative;
+  top:0px;
+  left:0px;
+  min-height: 660px;
+  width: 660px;
+  background: url('http://i.imgur.com/FaL2NBA.jpg');
   background-size: contain;
 }
 
