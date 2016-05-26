@@ -17,41 +17,41 @@
   width:500px;
 }
 
+#shoes
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+#bottom
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+}
+
+#hat
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 30;
+}
+
 #top
 {
   position: absolute;
   top: 0px;
   left: 0px;
-   z-index: 10;
-}
-#bottom
-{
-    position: absolute;
-  top: 0px;
-  left: 0px;
-z-index: 20;
-}
-
-#shoes
-{
-    position: absolute;
-  top: 0px;
-  left: 0px;
-z-index: 30;
+  z-index: 40;
 }
 
 #jacket
 {
-    position: absolute;
+  position: absolute;
   top: 0px;
   left: 0px;
-z-index: 40;
-}
-
-#hat
-{
-    position: absolute;
-  top: 0px;
-  left: 0px;
-z-index: 50;
+  z-index: 50;
 }

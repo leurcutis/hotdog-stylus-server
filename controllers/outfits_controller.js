@@ -18,7 +18,7 @@ controller.create = function(req, res) {
 
   var outfit = new Outfit({
     name: req.body.name,
-    hat_id: req.body.hat_id,
+    hat_id: req.body.hat_id, //add had.had_id, etc
     top_id: req.body.top_id,
     jacket_id: req.body.jacket_id,
     bottom_id: req.body.bottom_id,

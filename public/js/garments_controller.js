@@ -16,6 +16,15 @@ GarmentsController.$inject = ['$http'];
    self.select = select;
    // self.sampleImage = 'http://i.imgur.com/FaL2NBA.jpg';
 
+   /*self.save = function(){
+    $http
+      .post({
+        url: '', // post route here
+        data: self.currentChoice
+      })
+      .done() // do stuff when done
+   }*/
+
   function select(garment) {
     console.log('click');
     // self.currentChoice = garment;
