@@ -8,15 +8,15 @@ h1 {
   position: relative;
   top:0px;
   left:0px;
-  min-height: 660px;
-  width: 660px;
+  min-height: 667px;
+  width: 670px;
   background: url('http://i.imgur.com/FaL2NBA.jpg');
   background-size: contain;
 }
 
 .garment {
-  width: 50px;
-  height: 50px;
+  width: 200px;
+  height: 250px;
 }
 
 .currentChoice {
