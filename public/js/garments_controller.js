@@ -63,7 +63,7 @@ GarmentsController.$inject = ['$http'];
 
   function getGarments() {
     $http
-      .get(baseUrl + '/api/garments')
+      .get('/api/garments')
       .then(function(response) {
         console.log(response);
         self.all = response.data;
@@ -74,7 +74,7 @@ GarmentsController.$inject = ['$http'];
 
   function showGarment() {
     $http
-      .get(baseUrl + '/api/garments/' + garment._id)
+      .get('/api/garments/' + garment._id)
       .then(function(response) {
         console.log(response);
         self.all = response.data;
@@ -92,7 +92,7 @@ GarmentsController.$inject = ['$http'];
 
   function addGarment() {
     $http
-      .post(baseUrl + '/api/garments', self.newGarment)
+      .post('/api/garments', self.newGarment)
       .then(function(response) {
         console.log('add garment running');
         getGarments();
@@ -103,7 +103,7 @@ GarmentsController.$inject = ['$http'];
 
   function deleteGarment(garment) {
     $http
-      .delete(baseUrl + '/api/garments/' + garment._id)
+      .delete('/api/garments/' + garment._id)
       .then(function(response) {
         console.log(response);
         var index = self.all.indexOf(garment);
