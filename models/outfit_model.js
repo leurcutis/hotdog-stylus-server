@@ -7,7 +7,6 @@ var outfitSchema = new mongoose.Schema({
   bottom_id: String,
   shoes_id: String,
   createdAt: {type: Date, default: Date.now},
-  updatedAt: {type: Date, default: Date.now},
 });
 
 var Outfit = mongoose.model('Outfit', outfitSchema);

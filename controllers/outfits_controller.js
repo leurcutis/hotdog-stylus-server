@@ -31,7 +31,7 @@ controller.create = function(req, res) {
 
 // push outfit into outfit array in user model here
   });
-    var user = User.findById('57439dbbbc946f327297cacc', function(err, user) {
+    var user = User.findById('5745e7687a25c93de29fe042', function(err, user) {
     if (err) throw err;
     user.outfits.push(outfit);
     res.json(outfit);
@@ -56,23 +56,20 @@ controller.show = function(req, res) {
 //outfit update
 controller.update = function(req, res) {
   var id = req.params.id;
-  var name = req.params.name;
+  var name = req.body.name;
   var hat_id = req.body.hat_id;
   var top_id = req.body.top_id;
   var jacket_id = req.body.jacket_id;
   var bottom_id = req.body.bottom_id;
   var createdAt = req.body.createdAt;
-  var updatedAt = req.body.updatedAt;
 
   Outfit.findOneAndUpdate(
     {_id: id},
     { name: name,
-      hat_id: hat_id,
-      top_id: top_id,
-      jacket_id: jacket_id,
-      bottom_id: bottom_id,
-      createdAt: createdAt,
-      updatedAt: updatedAt,
+      hat_id: req.body.hat_id,
+      top_id: req.body.top_id,
+      jacket_id: req.body.jacket_id,
+      bottom_id: req.body.bottom_id,
     },
     function(err, outfit) {
     if (err) {

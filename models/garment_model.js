@@ -9,8 +9,6 @@ var garmentSchema = new mongoose.Schema({
   color: String,
   imageUrl: String,
   createdAt: {type: Date, default: Date.now},
-  updatedAt: {type: Date, default: Date.now},
-
 });
 
 var Garment = mongoose.model('Garment', garmentSchema);

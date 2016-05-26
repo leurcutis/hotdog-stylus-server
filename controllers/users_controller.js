@@ -44,20 +44,18 @@ controller.show = function(req, res) {
 //user update
 controller.update = function(req, res) {
   var id = req.params.id;
-  var firstName = req.params.firstName;
+  var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var avatarUrl = req.body.avatarUrl;
   var createdAt = req.body.createdAt;
-  var updatedAt = req.body.updatedAt;
 
   User.findOneAndUpdate(
     {_id: id},
-    { firstName: firstName,
-      lastName: lastName,
-      avatarUrl: avatarUrl,
-      createdAt: createdAt,
-      updatedAt: updatedAt,
+    { firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      avatarUrl: req.body.avatarUrl,
     },
+
     function(err, user) {
     if (err) {
       throw err;

@@ -23,7 +23,6 @@ controller.create = function(req, res) {
     color: req.body.color,
     imageUrl: req.body.imageUrl,
     createdAt: req.body.createdAt,
-    updatedAt: req.body.updatedAt,
   });
 
   garment.save(function(err) {
@@ -31,7 +30,7 @@ controller.create = function(req, res) {
 
   // push garment into closet array in user model here
   });
-  var user = User.findById('57452bd37d5eb627b54fd936', function(err, user) {
+  var user = User.findById('5745e7687a25c93de29fe042', function(err, user) {
     if (err) throw err;
     user.closet.push(garment);
     res.json(garment);
@@ -56,23 +55,20 @@ controller.show = function(req, res) {
 //garment update
 controller.update = function(req, res) {
   var id = req.params.id;
-  var name = req.params.name;
+  var name = req.body.name;
   var type = req.body.type;
   var size = req.body.size;
   var color = req.body.color;
-  var image = req.body.imageUrl;
+  var imageUrl = req.body.imageUrl;
   var createdAt = req.body.createdAt;
-  var updatedAt = req.body.updatedAt;
 
   Garment.findOneAndUpdate(
     {_id: id},
-    { name: name,
-      type: type,
-      size: size,
-      color: color,
-      image: image,
-      createdAt: createdAt,
-      updatedAt: updatedAt,
+    { name: req.body.name,
+      type: req.body.type,
+      size: req.body.size,
+      color: req.body.color,
+      imageUrl: req.body.imageUrl,
     },
     function(err, garment) {
     if (err) {
@@ -81,6 +77,7 @@ controller.update = function(req, res) {
       res.json(garment);
   });
 };
+
 
 //todo destroy
 controller.destroy = function(req, res){
