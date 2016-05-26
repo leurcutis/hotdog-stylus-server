@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="HotDogStylusApp">
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Hotdog Stylus!</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+  <script src="js/users_controller.js" charset="utf-8"></script>
+  <script src="js/garments_controller.js" charset="utf-8"></script>
+  <script src="js/outfits_controller.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+{{1+1}}
+
+  <div ng-controller="OutfitsController as outfits">
+  </div>
+
+
+  <div ng-controller="GarmentsController as garments">
+    <div id="outfit_builder">
+
+      <img ng-src="{{garments.currentChoice.top.imageUrl}}" class="currentChoice" id="top">
+      <img ng-src="{{garments.currentChoice.bottom.imageUrl}}" class="currentChoice" id="bottom">
+      <img ng-src="{{garments.currentChoice.shoes.imageUrl}}" class="currentChoice" id="shoes">
+      <img ng-src="{{garments.currentChoice.hat.imageUrl}}" class="currentChoice" id="hat">
+      <img ng-src="{{garments.currentChoice.jacket.imageUrl}}" class="currentChoice" id="jacket">
+
+    </div>
+    <ul ng-repeat="garment in garments.all">
+      <li ng-click="garments.select(garment)">
+        <img class="garment" ng-src="{{garment.imageUrl}}">
+      </li>
+    </ul>
+    <img ng-src="{{garments.sampleImage}}">
+  </div>
+
+</body>
+</html>

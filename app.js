@@ -5,6 +5,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 var router = express.Router();
+var path = require('path');
 
 // required routes
 var garment_router = require('./routes/garment_routes.js');
@@ -26,6 +27,7 @@ app.use(allowCrossDomain);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/garments', garment_router);
 app.use('/api/outfits', outfit_router);
@@ -33,7 +35,7 @@ app.use('/api/users', user_router);
 
 // root route
 app.get('/', function(req, res) {
-  res.json({message: 'hello, suckas. welcome to HOTDOG STYLUS'});
+  res.render('index');
 });
 
 app.listen(port, function() {

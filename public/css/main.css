@@ -1,0 +1,57 @@
+
+
+#outfit_builder {
+  min-height: 630px;
+  width:666.5px;
+  background: url('http://i.imgur.com/FaL2NBA.jpg');
+  background-size: contain;
+}
+
+.garment {
+  width: 50px;
+  height: 50px;
+}
+
+.currentChoice {
+  min-height: 500px;
+  width:500px;
+}
+
+#top
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+   z-index: 10;
+}
+#bottom
+{
+    position: absolute;
+  top: 0px;
+  left: 0px;
+z-index: 20;
+}
+
+#shoes
+{
+    position: absolute;
+  top: 0px;
+  left: 0px;
+z-index: 30;
+}
+
+#jacket
+{
+    position: absolute;
+  top: 0px;
+  left: 0px;
+z-index: 40;
+}
+
+#hat
+{
+    position: absolute;
+  top: 0px;
+  left: 0px;
+z-index: 50;
+}
