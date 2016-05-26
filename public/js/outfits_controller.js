@@ -14,7 +14,7 @@ function OutfitsController($http){
 
   function getOutfits() {
     $http
-      .get('http://localhost:3000/api/outfits')
+      .get('/api/outfits')
       .then(function(response) {
         console.log(response);
         self.all = response.data;
@@ -25,7 +25,7 @@ function OutfitsController($http){
 
   function showOutfit() {
     $http
-      .get(baseUrl + '/api/outfits/' + outfit._id)
+      .get('/api/outfits/' + outfit._id)
       .then(function(response) {
         console.log(response);
         self.all = response.data;
@@ -34,7 +34,7 @@ function OutfitsController($http){
 
   function addOutfit() {
     $http
-      .post(baseUrl + '/api/outfits', self.newOutfit)
+      .post('/api/outfits', self.newOutfit)
       .then(function(response) {
         console.log('add outfit running');
         getOutfits();
@@ -45,7 +45,7 @@ function OutfitsController($http){
 
   function deleteOutfit(outfit) {
     $http
-      .delete(baseUrl + '/api/outfits/' + outfit._id)
+      .delete('/api/outfits/' + outfit._id)
       .then(function(response) {
         console.log(response);
         var index = self.all.indexOf(outfit);
