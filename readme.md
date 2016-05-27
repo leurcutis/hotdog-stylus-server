@@ -57,3 +57,8 @@ Getting the outfit to build correctly was very difficult, and the solution was a
 Additionally, having to think through the approach of how to show off the images (and how they worked together as slides) was very demanding, as well as all the image manipulation that had to be done for this project to work correctly. 
 
 Lastly, I took great care to think about how my models interacted with each other because without that correct approach this app never would have worked well, nor would it be scaleable.
+
+###Routes
+![](https://dl.dropboxusercontent/s/dp3fb9tkt4l0kap/Routes%20table.png)
+
+My project had no Authentication. Above is a table of my routes.
