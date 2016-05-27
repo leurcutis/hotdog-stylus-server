@@ -1,9 +1,23 @@
 
+#nav {
+  background: black;
+}
+
+/*#outfit_builder {
+  display: inline-block;
+}*/
+
 
 h1 {
  font-family: 'Poiret One', cursive;
- font-size: 50px;
- margin: 0 auto;
+ font-size: 40px;
+ margin-right: 1px ;
+ margin-left: 1px ;
+ margin-top: 1px ;
+ margin-bottom: 1px ;
+ margin-color: black;
+ background: black;
+ color: white;
 }
 
 h3 {
@@ -12,14 +26,20 @@ h3 {
 }
 
 .closet {
-  float: left;
+  margin-top: 40px;
+}
+
+.clothes {
+  margin-left:-80px;
+  margin-top: -20px;
+  margin-bottom: -70px;
 }
 
 #outfit_builder {
   position: relative;
   top:0px;
   left:0px;
-  min-height: 667px;
+  min-height: 663px;
   width: 670px;
   background: url('http://i.imgur.com/FaL2NBA.jpg');
   background-size: contain;
